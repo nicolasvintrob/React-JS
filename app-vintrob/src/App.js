@@ -20,7 +20,7 @@ function App() {
           Nicolas Vintrob
         </a> */}
       </header>
-      <Avatar />
+     {/*  <Avatar /> */}
     </div>
   );
 }
