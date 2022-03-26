@@ -1,6 +1,7 @@
 /* import logo from './logo.svg'; */
 /* import './App.css'; */
 import Avatar from '../src/components/Components /Avatar'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/NavBar/NavBar';
 
 
@@ -8,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      <ItemListContainer greeting="Gracias por elegirnos" />
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" />
 
