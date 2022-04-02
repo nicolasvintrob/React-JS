@@ -1,35 +1,37 @@
 /* import logo from './logo.svg'; */
 /* import './App.css'; */
+import { useState } from 'react'
 import Avatar from '../src/components/Components /Avatar'
 import ItemCount from './components/ItemCount/ItemCount';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/NavBar/NavBar';
+import { BrowserRouter, routers, route } from 'react-router-dom'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 function App() {
   
-  const onAdd = (quantity) => {
+  /* const onAdd = (quantity) => {
     console.log(quantity)
-  }
+  } */
 
   return (
     <div className="App">
-      <NavBar />
+{/*       <NavBar />
       <ItemListContainer greeting="Gracias por elegirnos" />
       <ItemCount initial={1} stock={10} onAdd={onAdd} />
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" />
+      </header> */}
+      <BrowserRouter>
+      <NavBar />
+      <routes>
+        <route path= '/' element={<ItemListContainer />
+        <route path= '/category/:categoryId' element={<ItemListContainer />
+        <route path='/item/:id' element={<ItemDetailContainer />} />
+      </routes>
+      </BrowserRouter>
+      <p>2022 Card</p>
 
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Nicolas Vintrob
-        </a> */}
-      </header>
-     {/*  <Avatar /> */}
     </div>
   );
 }
